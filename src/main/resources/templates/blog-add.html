@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Add Post</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-4">
+    <h1>Add Post</h1>
+    <form action="/blog/add" method="post" class="mt-4">
+        <input type="text" name="title" maxlength="100" placeholder="Write title of post" class="form-control mt-3">
+        <input type="text"  name="anons" maxlength="400" placeholder="Write anons of post" class="form-control mt-3">
+        <textarea style="resize: none; height: 265px;" maxlength="4500" class="form-control mt-3" name="full_text" placeholder="Write text"></textarea>
+        <button type="submit" class="btn btn-success mt-2 fs-5">Add</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
